@@ -1,14 +1,15 @@
+# EMBO_Qt6.4 - EMBedded Oscilloscope for Qt 6.4.0
+
+
+### Please note that this is not intended to be a fork or a copy of the original project.
+### This was done just out of personal need, it's public just because. Go to the [original repository](https://github.com/parezj/EMBO) if you have questions or thanks.
+
+------------------------
 <p float="left" align="center">
   <img src="https://raw.githubusercontent.com/parezj/EMBO/master/img/icon.png" alt="EMBO" width="150" />
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://meas.fel.cvut.cz/" alt="CTU"><img src="https://raw.githubusercontent.com/parezj/EMBO/master/img/ctu_meas.png" height="150" /></a>
 </p>
-
-# EMBO_Qt6.4 - EMBedded Oscilloscope for Qt 6.4.0
-This is not intended to be a fork or a copy of the original project.
-
-This was done just out of personal need, it's public just because. Go to the original repository if you have questions or thanks.
-------------------------
 
 > Download **[HERE](https://github.com/parezj/EMBO/releases)**  
 
