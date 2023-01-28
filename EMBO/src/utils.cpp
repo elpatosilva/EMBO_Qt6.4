@@ -9,6 +9,7 @@
 #include <QString>
 #include <QDebug>
 #include <QMessageBox>
+#include <QRegularExpression>
 
 #include <math.h>
 #include <assert.h>
@@ -64,7 +65,7 @@ QString format_unit(double value, QString unit, int precision)
         suffix = "";
 
     if (ret.contains('.'))
-        return ret.remove(QRegExp(r)) + suffix + unit;
+        return ret.remove(QRegularExpression(r)) + suffix + unit;
     else
         return ret + suffix + unit;
 }

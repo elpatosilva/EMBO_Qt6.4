@@ -169,7 +169,7 @@ void WindowVm::statusBarLoad()
     layout->addWidget(m_status_rec,   0,5,1,1,Qt::AlignVCenter | Qt::AlignLeft);
     layout->addItem(status_spacer0,   0,6,1,1,Qt::AlignVCenter);
     layout->addWidget(status_zoom,    0,7,1,1,Qt::AlignVCenter);
-    layout->setMargin(0);
+    
     layout->setSpacing(0);
     m_ui->statusbar->addWidget(widget,1);
     m_ui->statusbar->setSizeGripEnabled(false);
@@ -1383,7 +1383,7 @@ void WindowVm::closeEvent(QCloseEvent*)
 void WindowVm::showEvent(QShowEvent*)
 {
     auto info = Core::getInstance()->getDevInfo();
-    QStringList pins = info->pins_scope_vm.split(EMBO_DELIM2, QString::SkipEmptyParts);
+    QStringList pins = info->pins_scope_vm.split(EMBO_DELIM2, Qt::SkipEmptyParts);
 
     if (pins.size() == 2)
     {

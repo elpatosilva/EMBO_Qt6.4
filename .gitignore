@@ -1,2 +1,4 @@
 build-EMBO-Desktop_Qt_6_4_0_GCC_64bit-Release
 EMBO/EMBO.pro.user
+build-EMBO-Desktop_Qt_6_4_0_GCC_64bit-Debug/
+EMBO/build/

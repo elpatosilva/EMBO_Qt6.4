@@ -47,7 +47,6 @@ WindowPwm::WindowPwm(QWidget *parent) : QMainWindow(parent), m_ui(new Ui::Window
     QGridLayout * layout = new QGridLayout(widget);
     layout->addWidget(status_img,0,0,1,1,Qt::AlignVCenter);
     layout->addWidget(m_status_enabled,0,1,1,1,Qt::AlignVCenter | Qt::AlignLeft);
-    layout->setMargin(0);
     layout->setSpacing(0);
     m_ui->statusbar->addWidget(widget,1);
     m_ui->statusbar->setSizeGripEnabled(false);

@@ -143,7 +143,7 @@ void WindowLa::statusBarLoad()
     layout->addWidget(m_status_seq,   0,5,1,1,Qt::AlignVCenter | Qt::AlignLeft);
     layout->addItem(status_spacer0,   0,6,1,1,Qt::AlignVCenter);
     layout->addWidget(status_zoom,    0,7,1,1,Qt::AlignVCenter);
-    layout->setMargin(0);
+    
     layout->setSpacing(0);
     m_ui->statusbar->addWidget(widget,1);
     m_ui->statusbar->setSizeGripEnabled(false);
@@ -769,7 +769,7 @@ void WindowLa::on_radioButton_zoomH_clicked(bool checked)
     }
     else
     {
-        m_ui->customPlot->setInteractions(0);
+        m_ui->customPlot->setInteractions((QCP::Interaction)0);
     }
 }
 
@@ -1468,7 +1468,7 @@ void WindowLa::showEvent(QShowEvent*)
     m_ref_v = info->ref_mv / 1000.0;
     m_status_vcc->setText(" Vcc: " + QString::number(info->ref_mv) + " mV");
 
-    QStringList pins = info->pins_scope_vm.split(EMBO_DELIM2, QString::SkipEmptyParts);
+    QStringList pins = info->pins_scope_vm.split(EMBO_DELIM2, Qt::SkipEmptyParts);
 
     if (pins.size() == 4)
     {
@@ -1763,7 +1763,7 @@ void WindowLa::updatePanel()
 
     bot_cursors->showText(true);
 
-    QStringList tokens = m_daqSet.fs_real.split('.', QString::SkipEmptyParts);
+    QStringList tokens = m_daqSet.fs_real.split('.', Qt::SkipEmptyParts);
 
     if (tokens.size() > 1 && tokens[0].length() > 4)
         m_ui->textBrowser_realFs->setHtml("<p align=\"center\">" + tokens[0] + ". " + tokens[1] + "</p>");

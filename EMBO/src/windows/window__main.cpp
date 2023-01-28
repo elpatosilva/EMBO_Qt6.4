@@ -290,7 +290,7 @@ void WindowMain::statusBarLoad()
     layout->addWidget(status_icon_jp,     0,16,1,1,Qt::AlignVCenter);
     layout->addWidget(status_spacer3,     0,17,1,1,Qt::AlignVCenter);
     layout->addWidget(status_author,      0,18,1,1,Qt::AlignVCenter);
-    layout->setMargin(0);
+    
     layout->setSpacing(0);
     m_ui->statusbar->addWidget(widget,1);
     m_ui->statusbar->setSizeGripEnabled(false);
@@ -612,10 +612,10 @@ void WindowMain::on_pushButton_scan_clicked()
     {
         for(auto port : ports)
         {
-            qInfo() << port.portName() << " " << port.description() << " " << port.manufacturer() << " " << port.isBusy();
+            qInfo() << port.portName() << " " << port.description() << " " << port.manufacturer() << " " << port.isNull();
 
             QListWidgetItem* item = new QListWidgetItem(m_ui->listWidget_ports);
-            item->setIcon(port.isBusy() ? QIcon(":/main/img/serial2_red.png") : QIcon(":/main/img/serial2.png"));
+            item->setIcon(port.isNull() ? QIcon(":/main/img/serial2_red.png") : QIcon(":/main/img/serial2.png"));
             QString val = port.portName() + (port.description().size() > 0 ? (" — " + port.description()) : "");
             item->setText(val.size() <= 20 ? val : val.left(16) + "...");
             item->setToolTip(val + (port.manufacturer().size() > 0 ? (" (" + port.manufacturer() + ")") : ""));
